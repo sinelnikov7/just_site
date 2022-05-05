@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Идол</title>
+</head>
+<body>
+<p>
+
+
+</p>
+
+{% for i in b %}
+<div>
+
+
+    <p>{{i.title}}</p>
+    <p>{{i.author}}</p>
+    <p>{{i.summary}}</p>
+    <p>{{i.genre.all}}}</p>
+    <p>Давай</p>
+    <a href="{{i.get_absolute_url}}">{{i.title}}</a>
+    
+
+
+
+
+</div>
+{% endfor %}
+<h1>{{s}}</h1>
+</body>
+</html>

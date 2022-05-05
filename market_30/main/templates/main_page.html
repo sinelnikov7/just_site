@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Клевый сайт!!!</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+     <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+</head>
+<body>
+
+<header id="header">
+
+    <div class="block"><a href="https://html5book.ru/hyperlinks-in-html/">
+        <img src="{% static 'img/logo.png' %} " alt="" class="logo"></a></div>
+    <div class="block">Hello</div>
+    <div class="block">World</div>
+    <div class="block">!!!</div>
+
+</header>
+<nav class="nav">
+    <ul class="nav_ul">
+        {%  for cat in categories %}
+        <li><a href="">{{cat.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+</nav>
+<main class="main">
+    {% for prod in products %}
+    <div class = "item_img">
+        <img src="{{ prod.image.url }} " alt="" class="img">
+        <p>Наименоваяние:<br>{{ prod.title}}</p>
+        <p>Описание:<br>{{ prod.discription}}</p>
+        <p>Цена:<br>{{ prod.price}}</p>
+        <p>Дата добовления:<br>{{ prod.created}}</p>
+        <p>Дата обновления:<br>{{ prod.update}}</p>
+        <p>Категория:<br>{{ prod.categories}}</p>
+
+    </div>
+{% endfor %}
+
+</main>
+<footer role="contentinfo">
+  По всем вопросам обращатся по телефону +375337443388
+</footer>
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
