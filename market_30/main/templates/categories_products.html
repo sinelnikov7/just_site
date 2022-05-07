@@ -1,0 +1,16 @@
+{% extends 'main_page.html' %}
+{% block title %}{{ current_category.name }}{% endblock %}
+{% block content %}
+{% for p in products %}
+    <div class = "item_img">
+        <img src="{{ p.image.url }} " alt="" class="img">
+        <p>Наименоваяние:<br>{{ p.title}}</p>
+        <p>Описание:<br>{{ p.discription}}</p>
+        <p>Цена:<br>{{ p.price}}</p>
+        <p>Дата добовления:<br>{{ p.created}}</p>
+        <p>Дата обновления:<br>{{ p.update}}</p>
+        <p>Категория:<br>{{ p.categories}}</p>
+
+    </div>
+    {% endfor %}
+{% endblock %}

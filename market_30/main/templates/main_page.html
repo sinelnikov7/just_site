@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Клевый сайтbr!!!</title>
+    <title>{% block title %}Клевый сайт!!!{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
      <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
 </head>
@@ -20,21 +20,24 @@
 </header>
 <nav class="nav">
     <ul class="nav_ul">
-        {%  for cat in categories %}
-        <li><a href="">{{cat.name}}</a></li>
-        {% endfor %}
         <li>
             <form action="" method="POST">
                 {% csrf_token %}
-                <input type="text" name="find">
+                <input type="text" name="find" placeholder="Введите наименование">
                 <button>Ок</button>
             </form>
         </li>
+        <li><a href="{% url 'main:main_page' %}">Главная</a></li>
+        {%  for cat in categories %}
+        <li><a href="{% url 'main:category_sort' cat.id %}">{{cat.name}}</a></li>
+        {% endfor %}
+
     </ul>
 
 </nav>
 
 <main class="main">
+    {% block content %}
 <h2>{{ error }}</h2>
     {% for p in product %}
     <div class = "item_img">
@@ -60,7 +63,7 @@
 
     </div>
 {% endfor %}
-
+{% endblock %}
 </main>
 <footer role="contentinfo">
   По всем вопросам обращатся по телефону +375337443388

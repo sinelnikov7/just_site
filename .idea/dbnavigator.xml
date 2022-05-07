@@ -27,7 +27,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="b9910749-fc07-4356-a7af-1cbfd1b4c325">
+    <connection id="72d725fb-4a5c-4213-a31a-f3ad53e47e48">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
@@ -35,10 +35,13 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="b9910749-fc07-4356-a7af-1cbfd1b4c325" />
+    <connection id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="b9910749-fc07-4356-a7af-1cbfd1b4c325" dataset="main.main_product" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" dataset="main.main_product" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" dataset="main.main_category" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" dataset="main.main_magazin_products" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" dataset="main.main_magazin" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -69,7 +72,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="b9910749-fc07-4356-a7af-1cbfd1b4c325" active="true" signed="false">
+      <connection id="72d725fb-4a5c-4213-a31a-f3ad53e47e48" active="true" signed="false">
         <database>
           <name value="Connection" />
           <description value="" />

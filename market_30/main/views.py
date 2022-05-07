@@ -9,7 +9,7 @@ def main_page(request):
     print(request.POST)
     if request.method == 'POST':
         product = Product.objects.filter(title=request.POST.get('find'))
-        #disc = Product.objects.get(discription = product)
+        # disc = Product.objects.get(discription = product)
         print(product)
         if product:
             context = {
@@ -31,4 +31,15 @@ def main_page(request):
 
     }
     return render(request, 'main_page.html', context)
+
+
+def category_sort(request, id):
+    products = Product.objects.filter(categories=id)
+    categories = Category.objects.all()
+    current_category = Category.objects.get(id=id)
+
+    context = {
+        'products': products, 'categories': categories, 'current_category': current_category,
+    }
+    return render(request, 'categories_products.html', context)
 # Create your views here.
